@@ -4,6 +4,7 @@ lua54 'yes'
 
 title "MMO-ELEVATORS"
 author "mehdimmo"
+version '1.0.0'
 
 client_script 'client.lua'
 
