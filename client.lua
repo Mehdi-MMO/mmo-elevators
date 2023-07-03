@@ -4,10 +4,10 @@ local CircleConfig = Config.Circle -- Circle configuration
 local function gimmeElev(floor, id)
     local options = {}
     for _, elevator in pairs(Config.elevators) do
-        if elevator.id == id and (elevator.floor == floor + 1 or elevator.floor == floor - 1) then
+        if elevator.id == id and (elevator.floor == floor + 2 or elevator.floor == floor - 1 or elevator.floor == floor + 1 or elevator.floor == floor + 2) then
             options[#options + 1] = {
                 title = elevator.floor > floor and "UP" or "DOWN", -- Set the title based on the direction
-                description = elevator.name or "Level " .. elevator.floor,
+                description = elevator.name and  elevator.name .. ' (' .. elevator.floor .. ')' or "Level " .. elevator.floor,
                 onSelect = function(args)
                     SetEntityCoords(ped, elevator.coords.x, elevator.coords.y, elevator.coords.z - 1.0, false,
                         false, false, false)
