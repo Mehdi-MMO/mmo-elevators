@@ -51,6 +51,8 @@ CreateThread(function()
                     menuOpen = false -- Close the menu when moving away from the elevator
                     lib.hideContext(true)
                     lib.hideTextUI()
+                else
+                    lib.hideTextUI()
                 end
                 break
             else
