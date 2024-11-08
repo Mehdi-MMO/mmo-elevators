@@ -51,6 +51,8 @@ CreateThread(function()
                     menuOpen = false
                     lib.hideContext(true)
                     lib.hideTextUI()
+                else
+                    lib.hideTextUI()
                 end
                 break
             else
